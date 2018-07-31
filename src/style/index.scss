@@ -20,13 +20,6 @@ body {
   display: flex;
 }
 
-.hero {
-  @extend .grad-box;
-  opacity: 0.9;
-  margin-top: 60px;
-  height: 400px;
-}
-
 .nav {
   @extend .grad-box;
   align-items: center;
@@ -47,10 +40,77 @@ body {
     }
   }
   .icons {
+    a {
+      text-decoration: none;
+      color: $white;
+      transition: color 300ms;
+      &:hover {
+        color: $primary;
+      }
+    }
     margin-right: 2rem;
     svg {
       font-size: 1.5rem;
       margin: 0.8rem;
     }
   }
+}
+
+.hero {
+  @extend .grad-box;
+  margin-top: 60px;
+  height: 400px;
+  overflow: auto;
+  position: relative;
+  padding: 4rem 6rem 0 6rem;
+  justify-content: space-around;
+  overflow: visible;
+  margin-bottom: 200px;
+  .words {
+    width: 400px;
+    text-align: justify;
+    padding: 2rem;
+    .bio {
+      margin-top: 0.5rem;
+      font-size: 1.3rem;
+      font-weight: $thin;
+      a {
+        color: $white;
+        text-decoration: none;
+        border-bottom: 2px solid $primary;
+        font-weight: $regular;
+        &:hover {
+          border-width: 3px;
+        }
+      }
+    }
+  }
+  .card {
+    height: 500px;
+    width: 700px;
+    max-width: 750px;
+  }
+  @media (max-width: 1200px) {
+    padding: 4rem 1rem 0 1rem;
+  }
+  @media (max-width: 990px) {
+    max-height: 500px;
+    display: inline-block;
+    margin-bottom: 500px;
+    .words {
+      width: 90%;
+    }
+    .card {
+      margin-top: 2em;
+      width: calc(100% - 4rem);
+    }
+  }
+}
+
+.card {
+  background-color: $white;
+  border-radius: 4px;
+  color: $dark;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+  padding: 2rem;
 }
