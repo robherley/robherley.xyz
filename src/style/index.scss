@@ -60,51 +60,34 @@ body {
   @extend .grad-box;
   margin-top: 60px;
   height: 400px;
-  overflow: auto;
-  position: relative;
-  padding: 4rem 6rem 0 6rem;
-  justify-content: space-around;
-  overflow: visible;
-  margin-bottom: 200px;
-  .words {
-    width: 400px;
-    text-align: justify;
-    padding: 2rem;
-    .bio {
-      margin-top: 0.5rem;
-      font-size: 1.3rem;
-      font-weight: $thin;
-      a {
-        color: $white;
-        text-decoration: none;
-        border-bottom: 2px solid $primary;
-        font-weight: $regular;
-        &:hover {
-          border-width: 3px;
-        }
+  position: absolute;
+  width: 100vw;
+  z-index: -1;
+}
+
+.words {
+  width: 600px;
+  text-align: justify;
+  color: $white;
+  .bio {
+    font-size: 1.3rem;
+    font-weight: $thin;
+    a {
+      color: $white;
+      text-decoration: none;
+      border-bottom: 2px solid $primary;
+      font-weight: $regular;
+      &:hover {
+        border-width: 3px;
       }
     }
   }
-  .card {
-    height: 500px;
-    width: 700px;
-    max-width: 750px;
-  }
-  @media (max-width: 1200px) {
-    padding: 4rem 1rem 0 1rem;
-  }
-  @media (max-width: 990px) {
-    max-height: 500px;
-    display: inline-block;
-    margin-bottom: 500px;
-    .words {
-      width: 90%;
-    }
-    .card {
-      margin-top: 2em;
-      width: calc(100% - 4rem);
-    }
-  }
+}
+
+.content {
+  padding-top: 60px;
+  display: flex;
+  flex-direction: column;
 }
 
 .card {
