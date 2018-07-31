@@ -1,0 +1,56 @@
+@import 'type';
+@import 'flex';
+@import 'colors';
+@import 'grad';
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Oxygen', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  background-color: $bg;
+}
+
+.grad-box {
+  @extend .grad-1;
+  color: $white;
+  display: flex;
+}
+
+.hero {
+  @extend .grad-box;
+  opacity: 0.9;
+  margin-top: 60px;
+  height: 400px;
+}
+
+.nav {
+  @extend .grad-box;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 60px;
+  z-index: 1000;
+  .name {
+    margin-left: 2rem;
+    font-size: 1.3rem;
+    .first {
+      font-weight: $thin;
+    }
+    .last {
+      font-weight: $thicc;
+    }
+  }
+  .icons {
+    margin-right: 2rem;
+    svg {
+      font-size: 1.5rem;
+      margin: 0.8rem;
+    }
+  }
+}

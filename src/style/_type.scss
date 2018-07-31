@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Oxygen:300,400,700');
+
+$thin: 300;
+$regular: 400;
+$thicc: 700;
+
+.t-h1 {
+  font-size: 2rem;
+  font-weight: $thicc;
+}
