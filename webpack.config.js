@@ -8,7 +8,8 @@ module.exports = {
     compress: true,
     open: false,
     port: DEV_PORT,
-    quiet: true
+    quiet: true,
+    host: '0.0.0.0'
   },
   module: {
     rules: [
