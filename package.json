@@ -64,7 +64,8 @@
     "prop-types": "^15.6.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "react-hot-loader": "^4.0.0"
+    "react-hot-loader": "^4.0.0",
+    "react-syntax-highlighter": "^8.0.1"
   },
   "lint-staged": {
     "*.{js,jsx}": [

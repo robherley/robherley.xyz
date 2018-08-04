@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from './common/Link';
-import Card from './common/Card';
+import Terminal from './common/Terminal';
 
 const Summary = () => (
   <>
@@ -17,14 +17,7 @@ const Summary = () => (
         full-stack, cloud and dev-ops.
       </div>
     </div>
-    <Card className="terminal">
-      <div className="dot-1" />
-      <div className="dot-2" />
-      <div className="dot-3" />
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid, ducimus
-      quis. Dolorum voluptate, temporibus sequi laborum similique maxime fugiat
-      aperiam ipsum adipisci minus molestiae natus. Sed ipsam id omnis sequi.
-    </Card>
+    <Terminal />
   </>
 );
 
