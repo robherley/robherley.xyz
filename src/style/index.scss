@@ -109,19 +109,29 @@ body {
 }
 
 .terminal {
-  @extend .card;
+  border-radius: 4px;
+  color: $white;
+  background-color: rgb(41, 42, 62);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
   grid-column: 5/8;
   grid-row: span 4;
   position: relative;
-  padding-top: 3rem;
-  width: calc(100% - 4rem);
-  overflow-y: auto;
+  padding-top: 2rem;
+  width: 100%;
+  .text-container {
+    height: calc(100% - 2rem);
+    padding: 1rem;
+    overflow-y: scroll;
+  }
   .dot {
     position: absolute;
     width: 15px;
     height: 15px;
     border-radius: 50%;
     top: 8px;
+    &:hover {
+      filter: brightness(1.5);
+    }
   }
   .dot-1 {
     @extend .dot;
@@ -138,25 +148,30 @@ body {
     left: 54px;
     background-color: #2ecc71;
   }
+  .err {
+    color: #e74c3c;
+  }
   .prompt {
-    color: #4a00e0;
+    color: $primary;
     font-weight: $thicc;
     width: 10rem;
-    white-space: nowrap;
+    white-space: pre;
     padding-right: 0.5rem;
   }
   input {
     @extend .t-mono;
+    color: $white;
     background: none;
     border: none;
     margin-bottom: 1rem;
     width: 100%;
-    color: $dark;
+    caret-color: $primary;
   }
   pre {
     white-space: pre-line;
     word-wrap: break-word;
     text-align: justify;
+    word-break: break-all;
   }
   @media (max-width: 960px) {
     grid-column: 5/9;
