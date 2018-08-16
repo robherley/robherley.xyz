@@ -6,7 +6,7 @@ const langArray = [
   ['Javascript', '#FFBB1C'],
   ['C/C++', '#BA3B46'],
   ['Python', '#5C80BC'],
-  ['SQL (Postgres)', '#9CEC5B'],
+  ['SQL', '#9CEC5B'],
   ['Java', '#8377D1'],
   ['Go', '#DE8F6E']
 ];
@@ -15,6 +15,7 @@ const webArray = [
   ['HTML5', '#DB5461'],
   ['CSS', '#9BC53D'],
   ['React/Redux', '#6A7FDB'],
+  ['Mongo', '#23ce6b'],
   ['Docker', '#944BBB'],
   ['IBM Cloud', '#47E5BC'],
   ['Kubernetes', '#345fde']
@@ -46,28 +47,24 @@ class Term extends Component {
     ls: 'super_secret_file.txt',
     help: true,
     whoami: (
-      <>
+      <div className="whoami">
         <div>
           <Text color="#7C7C7C">Name: </Text>
           <Text color="white">Rob Herley</Text>
         </div>
-        <div>
+        <div className="pad">
           <Text color="#7C7C7C">Major: </Text>
           <Text color="white">Computer Science</Text>
         </div>
-        <div>
+        <div className="pad">
           <Text color="#7C7C7C">School: </Text>
           <Text color="white">Stevens Tech</Text>
         </div>
-        <div>
+        <div className="pad">
           <Text color="#7C7C7C">Grad: </Text>
           <Text color="white">May 2019</Text>
         </div>
-        <div>
-          <Text color="#7C7C7C">Location: </Text>
-          <Text color="white">40.743152, -74.027767</Text>
-        </div>
-        <div>
+        <div className="pad">
           <Text color="#7C7C7C">Languages: </Text>
         </div>
         <div>
@@ -77,7 +74,7 @@ class Term extends Component {
             </Text>
           ))}
         </div>
-        <div>
+        <div className="pad">
           <Text color="#7C7C7C">Web & Cloud: </Text>
         </div>
         <div>
@@ -87,7 +84,7 @@ class Term extends Component {
             </Text>
           ))}
         </div>
-        <div>
+        <div className="pad">
           <Text color="#7C7C7C">Misc: </Text>
         </div>
         <div>
@@ -97,7 +94,7 @@ class Term extends Component {
             </Text>
           ))}
         </div>
-      </>
+      </div>
     )
   };
 

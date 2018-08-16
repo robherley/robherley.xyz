@@ -5,6 +5,7 @@ import Hero from './components/Hero';
 import Nav from './components/Nav';
 import Intro from './components/Intro';
 import './components/common/Icons';
+import Card from './components/common/Card';
 
 const App = () => (
   <>
@@ -12,7 +13,10 @@ const App = () => (
     <Hero />
     <div className="grid">
       <Intro />
-      <div style={{ gridColumn: 'span 8', gridRow: 'span 8' }} />
+      <div style={{ gridRow: 'span 1', gridColumn: '3/10' }} />
+      <Card style={{ gridRow: 'span 1', gridColumn: '3/10' }}>foo?</Card>
+      <Card style={{ gridRow: 'span 1', gridColumn: '3/10' }}>foo?</Card>
+      <Card style={{ gridRow: 'span 1', gridColumn: '3/10' }}>foo?</Card>
     </div>
   </>
 );

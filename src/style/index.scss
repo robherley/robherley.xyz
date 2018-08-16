@@ -15,6 +15,11 @@ body {
   overflow-x: hidden;
 }
 
+::selection {
+  background: $primary;
+  color: $white;
+}
+
 .nav {
   @extend .grad-1;
   color: $white;
@@ -57,18 +62,22 @@ body {
   @extend .grad-1;
   color: $white;
   display: flex;
-  height: 500px;
+  height: 550px;
   position: absolute;
-  width: 100vw;
+  width: calc(100vw + 50px);
   z-index: -1;
+  transform: rotate(-5deg) translateX(-50px);
+  transform-origin: 0 0;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
+  grid-template-columns: repeat(12, 1fr);
   grid-auto-rows: 100px;
   grid-gap: 1rem;
-  padding: 120px 1rem;
+  max-width: 1500px;
+  padding: 140px 1rem;
+  margin: 0 auto;
 }
 
 .card {
@@ -80,8 +89,8 @@ body {
 }
 
 .intro {
-  grid-column: 2/4;
-  grid-row: span 2;
+  grid-column: 2/6;
+  grid-row: span 4;
   text-align: justify;
   color: $white;
   .bio {
@@ -96,15 +105,16 @@ body {
         border-width: 3px;
       }
     }
-    @media (max-width: 700px) {
+    @media (max-width: 615px) {
       font-size: 1.1rem;
     }
   }
-  @media (max-width: 960px) {
-    grid-column: 1/4;
+  @media (max-width: 1000px) {
+    grid-column: 1/5;
   }
-  @media (max-width: 700px) {
-    grid-column: span 8;
+  @media (max-width: 615px) {
+    grid-column: span 12;
+    grid-row: span 2;
   }
 }
 
@@ -113,7 +123,7 @@ body {
   color: $white;
   background-color: rgb(41, 42, 62);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
-  grid-column: 5/8;
+  grid-column: 7/12;
   grid-row: span 4;
   position: relative;
   padding-top: 2rem;
@@ -122,6 +132,13 @@ body {
     height: calc(100% - 2rem);
     padding: 1rem;
     overflow-y: scroll;
+  }
+  .whoami {
+    word-break: normal;
+    white-space: normal;
+    .pad {
+      padding-top: 0.3rem;
+    }
   }
   .dot {
     position: absolute;
@@ -164,8 +181,9 @@ body {
     background: none;
     border: none;
     margin-bottom: 1rem;
-    width: 100%;
     caret-color: $primary;
+    width: calc(100%-10.5rem);
+    outline: none;
   }
   pre {
     white-space: pre-line;
@@ -173,10 +191,16 @@ body {
     text-align: justify;
     word-break: break-all;
   }
-  @media (max-width: 960px) {
-    grid-column: 5/9;
+  @media (max-width: 1000px) {
+    grid-column: 6/13;
   }
-  @media (max-width: 700px) {
-    grid-column: span 8;
+  @media (max-width: 615px) {
+    grid-row: span 4;
+    grid-column: span 12;
   }
+}
+
+.placeholder {
+  grid-row: span 1;
+  grid-column: span 12;
 }
