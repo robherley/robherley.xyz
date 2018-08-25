@@ -6,12 +6,12 @@ $regular: 400;
 $thicc: 700;
 
 .t-h1 {
-  font-size: 2rem;
+  font-size: 40px;
   font-weight: $thicc;
 }
 
 .t-mono {
   font-size: 14px;
-  font-weight: $thicc;
+  font-weight: $regular;
   font-family: 'IBM Plex Mono', monospace;
 }

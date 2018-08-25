@@ -18,7 +18,6 @@ const Summary = () => (
       </div>
     </div>
     <Terminal />
-    <div className="anchor" />
   </>
 );
 

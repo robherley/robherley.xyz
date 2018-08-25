@@ -38,7 +38,7 @@ class Term extends Component {
       <a href="http://thecatapi.com">
         <img
           src="http://thecatapi.com/api/images/get?format=src&type=gif"
-          alt="cat"
+          alt="loading cat..."
         />
       </a>
     ),

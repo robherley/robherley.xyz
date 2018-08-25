@@ -10,7 +10,7 @@ const Nav = () => (
     </div>
     <div className="icons">
       <Link to="https://github.com/robherley">
-        <FontAwesomeIcon icon={['fab', 'github-alt']} />{' '}
+        <FontAwesomeIcon icon={['fab', 'github-alt']} />
       </Link>
       <Link to="https://www.linkedin.com/in/robherley/">
         <FontAwesomeIcon icon={['fab', 'linkedin']} />
