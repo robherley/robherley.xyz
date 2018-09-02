@@ -108,7 +108,7 @@ body {
     }
   }
   @media (max-width: 1000px) {
-    grid-column: 1/5;
+    grid-column: 1/6;
   }
   @media (max-width: 615px) {
     grid-column: span 12;
@@ -180,7 +180,7 @@ body {
     border: none;
     margin-bottom: 1rem;
     caret-color: $primary;
-    width: calc(100%-10.5rem);
+    width: calc(100% - 10rem);
     outline: none;
   }
   pre {
@@ -234,7 +234,7 @@ body {
   }
 
   @media (max-width: 615px) {
-    grid-row: 8/11;
+    grid-row: 8/12;
   }
 }
 

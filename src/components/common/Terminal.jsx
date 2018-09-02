@@ -35,12 +35,12 @@ class Term extends Component {
 
   commands = {
     cat: (
-      <a href="http://thecatapi.com">
+      <div>
         <img
           src="http://thecatapi.com/api/images/get?format=src&type=gif"
           alt="loading cat..."
         />
-      </a>
+      </div>
     ),
     vim: 'just use emacs',
     emacs: 'just use vim',
@@ -187,6 +187,8 @@ class Term extends Component {
           <div className="t-mono row">
             <span className="prompt">you@robherley.xyz ~</span>
             <input
+              autoCapitalize="none"
+              spellCheck={false}
               type="text"
               ref={this.term.input}
               onChange={this.handleInput}
