@@ -4,7 +4,7 @@ import { hot } from 'react-hot-loader';
 import Hero from './components/Hero';
 import Nav from './components/Nav';
 import Intro from './components/Intro';
-import SectionHead from './components/SectionHead';
+import SectionHead from './components/common/SectionHead';
 import Project from './components/Project';
 import './components/common/Icons';
 
@@ -12,7 +12,7 @@ const App = () => (
   <>
     <Nav />
     <Hero />
-    <div className="grid">
+    <main className="grid">
       <Intro />
       <SectionHead
         icon="code"
@@ -28,6 +28,15 @@ const App = () => (
       />
       <Project
         title="Overcast"
+        tech={[
+          'ibmcloud',
+          'docker',
+          'node',
+          'react',
+          'redux',
+          'redis',
+          'postgres'
+        ]}
         body={() => (
           <>
             Overcast is a web dashboard for IBM Cloud Dedicated. Utilizing React
@@ -41,22 +50,30 @@ const App = () => (
       />
       <Project
         title="Kommodore"
+        tech={[
+          'ibmcloud',
+          'kubernetes',
+          'node',
+          'react',
+          'redux',
+          'mongo',
+          'docker'
+        ]}
         body={() => (
           <>
             Kommodore provides an intuitive interface for IBM Cloud
             administrators to monitor the usage of provisioned Kubernetes
             clusters. Admins and cluster's owners are able to collect
             performance metrics including memory usage, CPU performance, and
-            storage allocation in order to optimize their clusters. In addition,
-            admins can define cluster-specific rules and be alerted of any such
-            violations. With this tool, administrators can monitor hundreds of
-            Kubernetes clusters and reduce unnecessary allocations and save
-            internal resources.
+            storage allocation in order to optimize their clusters. With this
+            tool, administrators can monitor hundreds of Kubernetes clusters and
+            reduce unnecessary allocations and save internal resources.
           </>
         )}
       />
       <Project
         title="Stratus"
+        tech={['node', 'react', 'redux', 'aws', 'mongo']}
         body={() => (
           <>
             Stratus is an online Markdown editor web service. The concept of the
@@ -70,6 +87,17 @@ const App = () => (
       />
       <Project
         title="Y.A.M.S."
+        tech={[
+          'typescript',
+          'node',
+          'socketio',
+          'electron',
+          'react',
+          'redux',
+          'aws',
+          'mongo',
+          'redis'
+        ]}
         body={() => (
           <>
             YAMS, otherwise known as Yet Another Messaging Service, is a
@@ -84,6 +112,7 @@ const App = () => (
       />
       <Project
         title="Scramble"
+        tech={['node', 'react', 'socketio']}
         body={() => (
           <>
             Scramble is a collection of fast-paced multiplayer mini-games
@@ -97,7 +126,7 @@ const App = () => (
           </>
         )}
       />
-    </div>
+    </main>
   </>
 );
 

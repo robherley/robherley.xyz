@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import cat from './img/cat.png';
 
 const Text = ({ color, children }) => <span style={{ color }}>{children}</span>;
 
@@ -8,7 +9,8 @@ const langArray = [
   ['Python', '#5C80BC'],
   ['SQL', '#9CEC5B'],
   ['Java', '#8377D1'],
-  ['Go', '#DE8F6E']
+  ['Go', '#DE8F6E'],
+  ['Erlang', '#F9DC5C']
 ];
 
 const webArray = [
@@ -35,12 +37,12 @@ class Term extends Component {
 
   commands = {
     cat: (
-      <div>
-        <img
-          src="http://thecatapi.com/api/images/get?format=src&type=gif"
-          alt="loading cat..."
-        />
-      </div>
+      <img
+        src={cat}
+        alt="cat"
+        className="cat"
+        onLoad={() => this.scrollDown()}
+      />
     ),
     vim: 'just use emacs',
     emacs: 'just use vim',
@@ -133,16 +135,21 @@ class Term extends Component {
     if (keyCode === 13) this.sendCmd();
   };
 
+  scrollDown = () => {
+    const { current: term } = this.term.window;
+    term.scrollTop = term.scrollHeight;
+    console.log('height:', term.scrollHeight);
+  };
+
   sendCmd = () => {
     const { cmd, history } = this.state;
+
     switch (cmd) {
       case 'clear':
         this.setState({ history: [], cmd: '' });
         break;
       default:
-        this.setState({ history: [...history, cmd], cmd: '' }, () => {
-          this.term.window.current.scrollTop = this.term.window.current.scrollTopMax;
-        });
+        this.setState({ history: [...history, cmd], cmd: '' }, this.scrollDown);
     }
   };
 

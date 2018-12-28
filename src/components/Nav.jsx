@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Link from './common/Link';
 
 const Nav = () => (
-  <div className="nav">
+  <nav>
     <div className="name">
       <span className="first">rob</span>
       <span className="last">herley</span>
@@ -19,7 +19,7 @@ const Nav = () => (
         <FontAwesomeIcon icon={['far', 'envelope']} />
       </Link>
     </div>
-  </div>
+  </nav>
 );
 
 export default Nav;

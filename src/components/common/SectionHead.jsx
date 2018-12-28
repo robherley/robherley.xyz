@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Row, Col } from './common/Flex';
+import { Row, Col } from './Flex';
 
 export default ({ icon, title, body }) => (
   <div className="section-head">

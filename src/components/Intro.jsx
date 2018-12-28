@@ -1,10 +1,10 @@
 import React from 'react';
 import Link from './common/Link';
-import Terminal from './common/Terminal';
+import Terminal from './Terminal';
 
 const Summary = () => (
   <>
-    <div className="intro">
+    <header className="intro">
       <div className="t-h1">Howdy,</div>
       <div className="bio">
         My name is Rob Herley. I{"'"}m a Software Developer from Long Island,
@@ -16,7 +16,7 @@ const Summary = () => (
         <Link to="https://www.ibm.com/">IBM</Link>. Primarily, I focus on
         full-stack, cloud and dev-ops.
       </div>
-    </div>
+    </header>
     <Terminal />
   </>
 );
