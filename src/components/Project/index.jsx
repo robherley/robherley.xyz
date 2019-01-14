@@ -1,31 +1,40 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Card from '../common/Card';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import Node from './icons/Node';
+const Project = ({ title, body, tech, color, link }) => (
+  <article
+    className="card project"
+    style={{ borderBottom: `4px solid ${color}` }}
+  >
+    {link ? (
+      <a target="_blank" href={link} rel="noopener noreferrer" className="src">
+        <FontAwesomeIcon icon={['fa', 'code']} />
+      </a>
+    ) : (
+      <div className="src-bad">
+        <FontAwesomeIcon icon={['fa', 'lock']} />
+      </div>
+    )}
 
-const Project = ({ title, body, tech }) => (
-  <section className="project-wrapper">
-    <Card className="project-card">
-      <div className="title">{title}</div>
-      <div className="body">{body()}</div>
-    </Card>
-    <div className="project-tech">
-      {tech.map(t => (
-        <span className="bubble" key={t}>
-          <div className="img-container">
-            <Node />
-          </div>
-        </span>
-      ))}
-    </div>
-  </section>
+    <header>
+      <h2 className="title">{title}</h2>
+    </header>
+    <section className="body">
+      <p>{body()}</p>
+    </section>
+    <section className="tech">
+      <h3>Notable Technologies Used:</h3>
+      <p>{tech.join(', ')}</p>
+    </section>
+  </article>
 );
 
 Project.propTypes = {
   title: PropTypes.string.isRequired,
   body: PropTypes.func.isRequired,
-  tech: PropTypes.arrayOf(PropTypes.string).isRequired
+  tech: PropTypes.arrayOf(PropTypes.string).isRequired,
+  color: PropTypes.string.isRequired
 };
 
 export default Project;

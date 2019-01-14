@@ -48,6 +48,9 @@ class Term extends Component {
     emacs: 'just use vim',
     ls: 'super_secret_file.txt',
     help: true,
+    snake: (
+      <a href="https://snake.robherley.xyz">https://snake.robherley.xyz</a>
+    ),
     whoami: (
       <div className="whoami">
         <div>
@@ -138,7 +141,6 @@ class Term extends Component {
   scrollDown = () => {
     const { current: term } = this.term.window;
     term.scrollTop = term.scrollHeight;
-    console.log('height:', term.scrollHeight);
   };
 
   sendCmd = () => {
@@ -148,8 +150,13 @@ class Term extends Component {
       case 'clear':
         this.setState({ history: [], cmd: '' });
         break;
+      case 'snake':
+        window.open('https://snake.robherley.xyz', '_blank');
+      // eslint-disable no-fallthrough
       default:
-        this.setState({ history: [...history, cmd], cmd: '' }, this.scrollDown);
+        this.setState({ history: [...history, cmd], cmd: '' }, () =>
+          this.scrollDown()
+        );
     }
   };
 

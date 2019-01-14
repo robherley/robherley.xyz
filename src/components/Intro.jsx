@@ -15,6 +15,11 @@ const Summary = () => (
         and a part-time Software Engineer at{' '}
         <Link to="https://www.ibm.com/">IBM</Link>. Primarily, I focus on
         full-stack, cloud and dev-ops.
+        <div className="resume">
+          <Link to="https://github.com/robherley/resume/blob/master/resume.pdf">
+            Résumé
+          </Link>
+        </div>
       </div>
     </header>
     <Terminal />
