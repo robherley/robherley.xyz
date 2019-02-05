@@ -40,6 +40,9 @@ nav {
     .last {
       font-weight: $thicc;
     }
+    @media (max-width: 1000px) {
+      margin-left: 1rem;
+    }
   }
   .icons {
     a {
@@ -54,6 +57,9 @@ nav {
     svg {
       font-size: 1.5rem;
       margin: 0.8rem;
+    }
+    @media (max-width: 1000px) {
+      margin-right: 1rem;
     }
   }
 }
@@ -84,10 +90,11 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
-  padding: 140px 1rem 4rem 1rem;
+  padding: 8rem 1rem 4rem 1rem;
   @media (max-width: 1000px) {
     flex-direction: column;
     align-items: center;
+    padding-top: 6rem;
   }
 }
 
