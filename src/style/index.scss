@@ -69,16 +69,6 @@ nav {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-auto-rows: 100px;
-  grid-gap: 1rem;
-  max-width: 1500px;
-  padding: 140px 1rem;
-  margin: 0 auto;
-}
-
 .card {
   background-color: $white;
   border-radius: 6px;
@@ -90,9 +80,19 @@ nav {
   background-color: #2ecc71;
 }
 
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 140px 1rem 4rem 1rem;
+  @media (max-width: 1000px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 .intro {
-  grid-column: 2/6;
-  grid-row: span 4;
+  max-width: 450px;
   text-align: justify;
   color: $white;
   .bio {
@@ -127,17 +127,16 @@ nav {
         }
       }
     }
-
-    @media (max-width: 734px) {
-      font-size: 1.1rem;
-    }
   }
   @media (max-width: 1000px) {
-    grid-column: 1/6;
-  }
-  @media (max-width: 734px) {
-    grid-column: span 12;
-    grid-row: span 2;
+    font-size: 1.1rem;
+    max-width: 750px;
+    margin-bottom: 1rem;
+    .bio {
+      .resume {
+        margin-top: 1rem;
+      }
+    }
   }
 }
 
@@ -151,6 +150,8 @@ nav {
   position: relative;
   padding-top: 2rem;
   width: 100%;
+  max-width: 600px;
+  height: 400px;
   .text-container {
     height: calc(100% - 2rem);
     padding: 1rem;

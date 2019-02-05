@@ -4,7 +4,6 @@ import { hot } from 'react-hot-loader';
 import Hero from './components/Hero';
 import Nav from './components/Nav';
 import Intro from './components/Intro';
-// import SectionHead from './components/common/SectionHead';
 import Project from './components/Project';
 import './components/common/Icons';
 
@@ -13,7 +12,7 @@ const App = () => (
     <Nav />
     <Hero />
     <main>
-      <section className="grid">
+      <section className="header">
         <Intro />
       </section>
       <section className="projects">
