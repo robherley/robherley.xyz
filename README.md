@@ -1,1 +1,1 @@
-outdated, see `v1` branch for old site, or checkout [reb.gg](reb.gg)
+outdated, see `v1` branch for old site, or checkout [reb.gg](https://reb.gg)
